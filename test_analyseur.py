@@ -12,6 +12,7 @@ def test_mots():
 def test_top():
     texte = "pomme poire pomme banane pomme poire"
 
+    # On convertit le résultat en dict pour accéder facilement aux comptes
     resultat = dict(top_mots(texte))
 
     assert resultat["pomme"] == 3

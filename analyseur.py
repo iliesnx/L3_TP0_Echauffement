@@ -10,11 +10,14 @@ def compter_lignes(texte):
     return texte.count("\n") + 1
 
 def compter_mots(texte):
+    # On utilise une expression régulière pour extraire tous les mots (insensible à la casse)
     mots = re.findall(r'\b\w+\b', texte.lower())
     return len(mots)
 
 def top_mots(texte):
+    # Extraction des mots comme ci-dessus
     mots = re.findall(r'\b\w+\b', texte.lower())
+    # Utilisation de Counter pour compter les occurrences de chaque mot
     compteur = Counter(mots)
     return compteur.most_common(5)
 
